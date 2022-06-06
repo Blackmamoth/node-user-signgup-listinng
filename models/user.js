@@ -20,6 +20,18 @@ const userSchema = new mongoose.Schema({
     type: Date,
     required: [true, "DOB required"],
   },
+  country: {
+    type: String,
+    required: [true, "Country required"],
+  },
+  state: {
+    type: String,
+    required: [true, "State required"]
+  },
+  pinCode: {
+    type: Number,
+    required: [true, "Pin code required"]
+  }
 });
 
 module.exports = mongoose.model("User", userSchema);
