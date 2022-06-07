@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/users", require("./routes/userRoutes"));
+app.use("/api/address", require("./routes/addressRoutes"));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
@@ -24,9 +25,5 @@ app.get("/", (req, res) => {
 app.get("/users", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
-
-app.get("**", (req, res) => {
-  res.redirect('/users')
-})
 
 app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));

@@ -26,12 +26,16 @@ const userSchema = new mongoose.Schema({
   },
   state: {
     type: String,
-    required: [true, "State required"]
+    required: [true, "State required"],
+  },
+  city: {
+    type: String,
+    required: [true, "City required"],
   },
   pinCode: {
     type: Number,
-    required: [true, "Pin code required"]
-  }
+    required: [true, "Pin code required"],
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);

@@ -18,14 +18,33 @@ const getUser = asyncHandler(async (req, res) => {
 });
 
 const addUser = asyncHandler(async (req, res) => {
-  const { username, email, phone, dob, country, state, pinCode } = req.body;
+  const { username, email, phone, dob, country, state, city, pinCode } =
+    req.body;
 
-  if (!username || !email || !phone || !dob) {
+  if (
+    !username ||
+    !email ||
+    !phone ||
+    !dob ||
+    !country ||
+    !state ||
+    !city ||
+    !pinCode
+  ) {
     res.status(400);
     throw new Error("All fields are required");
   }
 
-  const user = await User.create({ username, email, phone, dob, country, state, pinCode });
+  const user = await User.create({
+    username,
+    email,
+    phone,
+    dob,
+    country,
+    state,
+    city,
+    pinCode,
+  });
 
   if (!user) {
     res.status(400);
