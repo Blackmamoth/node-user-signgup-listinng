@@ -30,7 +30,10 @@ const userSchema = new mongoose.Schema({
   },
   city: {
     type: String,
-    required: [true, "City required"],
+  },
+  pinCode: {
+    type: Number,
+    required: [true, "Pin Code required"],
   },
 });
 
