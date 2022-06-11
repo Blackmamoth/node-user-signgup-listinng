@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const cors = require("cors");
 const path = require("path");
+require("dotenv").config();
 
 const PORT = process.env.PORT || 5000;
 
@@ -27,7 +28,7 @@ app.get("/users", (req, res) => {
 });
 
 app.get("**", (req, res) => {
-  res.redirect("/users")
-})
+  res.redirect("/users");
+});
 
 app.listen(PORT, () => console.log(`Server Running on port ${PORT}`));
