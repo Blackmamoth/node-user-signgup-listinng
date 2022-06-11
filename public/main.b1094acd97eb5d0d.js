@@ -4737,8 +4737,14 @@ let UsersListComponent = /*#__PURE__*/(() => {
     ngOnInit() {}
 
     deleteUser(user) {
-      this.userService.deleteUser(user).subscribe();
-      this.router.navigate(['/']);
+      const proceed = confirm("Are you sure you want to delete this user?");
+
+      if (proceed) {
+        this.userService.deleteUser(user).subscribe();
+        this.router.navigate(['/']);
+      } else {
+        return;
+      }
     }
 
     edit(user) {
