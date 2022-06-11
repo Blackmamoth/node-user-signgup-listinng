@@ -17,6 +17,7 @@ const getUser = asyncHandler(async (req, res) => {
 
   if (!user) {
     res.status(404);
+    res.json({ success: false, error: "User not found" });
     throw new Error("User not found");
   }
 
@@ -67,12 +68,14 @@ const addUser = asyncHandler(async (req, res) => {
 
   if (!user) {
     res.status(400);
-    throw new Error("An Error occured");
+    res.json({ success: false, error: "Invalid input data" });
+    throw new Error("Invalid input data");
   }
   res.status(201).json({
     _id: user._id,
     username: user.username,
     email: user.email,
+    success: true,
   });
 });
 
@@ -81,6 +84,7 @@ const updateUser = asyncHandler(async (req, res) => {
 
   if (!user) {
     res.status(404);
+    res.json({ success: false, error: "User not found" });
     throw new Error("User not found");
   }
 
@@ -88,7 +92,7 @@ const updateUser = asyncHandler(async (req, res) => {
     new: true,
   });
 
-  res.status(200).json(updateUser);
+  res.status(200).json({ updateUser, success: true });
 });
 
 const deleteUser = asyncHandler(async (req, res) => {
@@ -101,7 +105,7 @@ const deleteUser = asyncHandler(async (req, res) => {
 
   await user.remove();
 
-  res.status(200).json({ success: "User Deleted" });
+  res.status(200).json({ success: true });
 });
 
 const loginUser = asyncHandler(async (req, res) => {
@@ -117,10 +121,12 @@ const loginUser = asyncHandler(async (req, res) => {
   if (user && (await bcrypt.compare(password, user.password))) {
     res.json({
       token: generateToken(user.id),
+      success: true,
     });
   } else {
     res.json({
       message: "Invalid Credentials",
+      success: false
     });
   }
 });
