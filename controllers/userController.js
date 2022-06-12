@@ -122,6 +122,7 @@ const loginUser = asyncHandler(async (req, res) => {
     res.json({
       token: generateToken(user.id),
       success: true,
+      _id: user._id
     });
   } else {
     res.json({
