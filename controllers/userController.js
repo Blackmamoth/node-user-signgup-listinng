@@ -35,6 +35,7 @@ const addUser = asyncHandler(async (req, res) => {
     state,
     city,
     pinCode,
+    admin,
   } = req.body;
 
   if (
@@ -122,12 +123,12 @@ const loginUser = asyncHandler(async (req, res) => {
     res.json({
       token: generateToken(user.id),
       success: true,
-      _id: user._id
+      _id: user._id,
     });
   } else {
     res.json({
       message: "Invalid Credentials",
-      success: false
+      success: false,
     });
   }
 });

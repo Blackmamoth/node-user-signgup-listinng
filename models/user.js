@@ -39,6 +39,10 @@ const userSchema = new mongoose.Schema({
     type: Number,
     required: [true, "Pin Code required"],
   },
+  admin: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);

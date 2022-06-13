@@ -18,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/address", require("./routes/addressRoutes"));
+app.use("/api/resetPassword", require("./routes/resetPassRoutes"));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));

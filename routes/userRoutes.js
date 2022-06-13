@@ -11,7 +11,7 @@ const {
 
 const { protectedRoute } = require("../middleware/authMiddleware");
 
-router.route("/").get(protectedRoute, getUsers).post(addUser);
+router.route("/").get(getUsers).post(addUser);
 
 router.route("/login").post(loginUser);
 
