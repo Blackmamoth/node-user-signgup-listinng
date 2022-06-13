@@ -5,6 +5,6 @@ const {
 } = require("../controllers/passwordController");
 
 router.route("/").post(forgotPassword);
-router.route("/reset/:tokenID").get(resetPassword);
+router.route("/reset/:tokenID").post(resetPassword);
 
 module.exports = router;
