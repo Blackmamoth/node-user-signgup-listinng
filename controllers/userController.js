@@ -130,6 +130,7 @@ const loginUser = asyncHandler(async (req, res) => {
       message: "Invalid Credentials",
       success: false,
     });
+    throw new Error("Invalid Credentials");
   }
 });
 

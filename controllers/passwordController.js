@@ -43,11 +43,9 @@ const forgotPassword = asyncHandler(async (req, res) => {
 
   const token = await Token.create({ userID: user.id });
 
-  const msg = `You can reset your password on this link\n\nhttp://localhost:5000/api/resetPassword/reset  /${token._id}\n\nThis link will expire in 5 minutes.`;
+  const msg = `You can reset your password on this link\n\nhttp://localhost:5000/resetPassword/reset/${token._id}\n\nThis link will expire in 5 minutes.`;
 
-  sendMail(email, msg);
-
-  res.status(200).json(user);
+  res.status(200).json({ token });
 });
 
 const resetPassword = asyncHandler(async (req, res) => {
@@ -59,6 +57,7 @@ const resetPassword = asyncHandler(async (req, res) => {
 
   if (!token) {
     res.status(400);
+    res.json({ message: "Token is either invalid or expired" });
     throw new Error("Token is either invalid or expired");
   }
 
@@ -70,6 +69,7 @@ const resetPassword = asyncHandler(async (req, res) => {
     { new: true }
   );
 
+  await token.remove();
   res.status(201).json(updatedUser);
 });
 
