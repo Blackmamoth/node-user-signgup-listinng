@@ -8,17 +8,28 @@ const generateToken = (id) => {
 };
 
 const getUsers = asyncHandler(async (req, res) => {
-  const users = await User.find().sort({ _id: -1 });
-  res.status(200).json(users);
+  if (req.user.admin) {
+    const users = await User.find().sort({ _id: -1 });
+    res.status(200).json(users);
+  } else {
+    res.status(403).json({
+      message: "Forbidden",
+    });
+    throw new Error("Forbidden");
+  }
 });
 
 const getUser = asyncHandler(async (req, res) => {
   const user = await User.findById(req.params.id);
-
   if (!user) {
     res.status(404);
     res.json({ success: false, error: "User not found" });
     throw new Error("User not found");
+  }
+
+  if (req.user.id !== user.id && !req.user.admin) {
+    res.status(401).json({ message: "Unauthorized" });
+    throw new Error("Unauthorized");
   }
 
   res.status(200).json(user);
@@ -55,17 +66,36 @@ const addUser = asyncHandler(async (req, res) => {
   const salt = await bcrypt.genSalt();
   const hashedPassword = await bcrypt.hash(password, salt);
 
-  const user = await User.create({
-    username,
-    email,
-    password: hashedPassword,
-    phone,
-    dob: new Date(dob),
-    country,
-    state,
-    city,
-    pinCode,
-  });
+  const adminUSer = await User.findOne({ admin: true });
+
+  let user;
+
+  if (!admin && !adminUSer) {
+    user = await User.create({
+      username,
+      email,
+      password: hashedPassword,
+      phone,
+      dob: new Date(dob),
+      country,
+      state,
+      city,
+      pinCode,
+    });
+  } else {
+    user = await User.create({
+      username,
+      email,
+      password: hashedPassword,
+      phone,
+      dob: new Date(dob),
+      country,
+      state,
+      city,
+      pinCode,
+      admin,
+    });
+  }
 
   if (!user) {
     res.status(400);
@@ -89,6 +119,11 @@ const updateUser = asyncHandler(async (req, res) => {
     throw new Error("User not found");
   }
 
+  if (req.user.id !== user.id && !req.user.admin) {
+    res.status(401).json({ message: "Unauthorized" });
+    throw new Error("Unauthorized");
+  }
+
   const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
@@ -102,6 +137,11 @@ const deleteUser = asyncHandler(async (req, res) => {
   if (!user) {
     res.status(404);
     throw new Error("User not found");
+  }
+
+  if (req.user.id !== user.id && !req.user.admin) {
+    res.status(401).json({ message: "Unauthorized" });
+    throw new Error("Unauthorized");
   }
 
   await user.remove();
