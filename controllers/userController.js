@@ -40,6 +40,7 @@ const addUser = asyncHandler(async (req, res) => {
     city,
     pinCode,
     admin,
+    medicines,
   } = req.body;
 
   if (
@@ -56,7 +57,7 @@ const addUser = asyncHandler(async (req, res) => {
     throw new Error("All fields are required");
   }
 
-  const salt = await bcrypt.genSalt();
+  const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
 
   const adminUSer = await User.findOne({ admin: true });
@@ -74,6 +75,7 @@ const addUser = asyncHandler(async (req, res) => {
       state,
       city,
       pinCode,
+      medicines,
     });
   } else {
     user = await User.create({
@@ -87,6 +89,7 @@ const addUser = asyncHandler(async (req, res) => {
       city,
       pinCode,
       admin,
+      medicines,
     });
   }
 

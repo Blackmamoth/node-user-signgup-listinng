@@ -43,6 +43,9 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  medicines: {
+    type: [String],
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);
