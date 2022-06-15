@@ -8,15 +8,8 @@ const generateToken = (id) => {
 };
 
 const getUsers = asyncHandler(async (req, res) => {
-  if (req.user.admin) {
-    const users = await User.find().sort({ _id: -1 });
-    res.status(200).json(users);
-  } else {
-    res.status(403).json({
-      message: "Forbidden",
-    });
-    throw new Error("Forbidden");
-  }
+  const users = await User.find().sort({ _id: -1 });
+  res.status(200).json(users);
 });
 
 const getUser = asyncHandler(async (req, res) => {
@@ -161,7 +154,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
   if (user && (await bcrypt.compare(password, user.password))) {
     res.json({
-      token: generateToken(user.id),
+      token: generateToken(user._id),
       success: true,
       _id: user._id,
     });
