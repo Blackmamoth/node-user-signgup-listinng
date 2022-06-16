@@ -43,6 +43,11 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  privilege: {
+    type: String,
+    enum: ["admin", "read", "readwrite"],
+    default: "read",
+  },
   medicines: {
     type: [String],
   },

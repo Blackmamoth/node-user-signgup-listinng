@@ -41,6 +41,7 @@ const addUser = asyncHandler(async (req, res) => {
     pinCode,
     admin,
     medicines,
+    privilege,
   } = req.body;
 
   if (
@@ -76,6 +77,7 @@ const addUser = asyncHandler(async (req, res) => {
       city,
       pinCode,
       medicines,
+      privilege,
     });
   } else {
     user = await User.create({
@@ -90,6 +92,7 @@ const addUser = asyncHandler(async (req, res) => {
       pinCode,
       admin,
       medicines,
+      privilege,
     });
   }
 
@@ -120,6 +123,11 @@ const updateUser = asyncHandler(async (req, res) => {
     throw new Error("Unauthorized");
   }
 
+  if (!req.user.privilege === "readwrite" || !req.user.privilege === "admin") {
+    res.status(401).json({ message: "No write privileges to the user" });
+    throw new Error("No write privileges to the user");
+  }
+
   const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
@@ -138,6 +146,11 @@ const deleteUser = asyncHandler(async (req, res) => {
   if (req.user.id !== user.id && !req.user.admin) {
     res.status(401).json({ message: "Unauthorized" });
     throw new Error("Unauthorized");
+  }
+
+  if (!req.user.privilege === "readwrite" || !req.user.privilege === "admin") {
+    res.status(401).json({ message: "No write privileges to the user" });
+    throw new Error("No write privileges to the user");
   }
 
   await user.remove();
