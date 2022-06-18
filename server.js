@@ -19,12 +19,29 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/address", require("./routes/addressRoutes"));
 app.use("/api/resetPassword", require("./routes/resetPassRoutes"));
+app.use("/api/media", require("./routes/mediaRoutes"));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.get("/users", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/users/edit/:id", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/forgot-password", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/resetPassword/reset/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 

@@ -41,9 +41,13 @@ const forgotPassword = asyncHandler(async (req, res) => {
     throw new Error("No User Found");
   }
 
+  // https://dev.nourishgenie.in/login
+
   const token = await Token.create({ userID: user.id });
 
-  const msg = `You can reset your password on this link\n\nhttp://localhost:5000/resetPassword/reset/${token._id}\n\nThis link will expire in 5 minutes.`;
+  const msg = `You can reset your password on this link\n\nhttps://dev.nourishgenie.in/resetPassword/reset/${token._id}\n\nThis link will expire in 5 minutes.`;
+
+  sendMail(email, msg);
 
   res.status(200).json({ token });
 });

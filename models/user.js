@@ -45,8 +45,8 @@ const userSchema = new mongoose.Schema({
   },
   roles: {
     type: String,
-    enum: ['view', 'add', 'none'],
-    default: 'none'
+    enum: ["view", "add", "none"],
+    default: "none",
   },
   medicines: {
     type: [String],
