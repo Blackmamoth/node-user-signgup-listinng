@@ -41,7 +41,7 @@ const addUser = asyncHandler(async (req, res) => {
     pinCode,
     admin,
     medicines,
-    privilege,
+    role,
   } = req.body;
 
   if (
@@ -77,7 +77,7 @@ const addUser = asyncHandler(async (req, res) => {
       city,
       pinCode,
       medicines,
-      privilege,
+      role,
     });
   } else {
     user = await User.create({
@@ -92,7 +92,7 @@ const addUser = asyncHandler(async (req, res) => {
       pinCode,
       admin,
       medicines,
-      privilege,
+      role,
     });
   }
 
@@ -123,16 +123,16 @@ const updateUser = asyncHandler(async (req, res) => {
     throw new Error("Unauthorized");
   }
 
-  if (!req.user.privilege === "readwrite" || !req.user.privilege === "admin") {
-    res.status(401).json({ message: "No write privileges to the user" });
-    throw new Error("No write privileges to the user");
+  if (req.user.role !== "add") {
+    res.status(403).json({ message: "Forbidden" });
+    throw new Error("Forbidden");
   }
 
   const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
   });
 
-  res.status(200).json({ updateUser, success: true });
+  res.status(200).json({ updatedUser, success: true });
 });
 
 const deleteUser = asyncHandler(async (req, res) => {
@@ -148,9 +148,9 @@ const deleteUser = asyncHandler(async (req, res) => {
     throw new Error("Unauthorized");
   }
 
-  if (!req.user.privilege === "readwrite" || !req.user.privilege === "admin") {
-    res.status(401).json({ message: "No write privileges to the user" });
-    throw new Error("No write privileges to the user");
+  if (req.user.role !== "add") {
+    res.status(403).json({ message: "Forbidden" });
+    throw new Error("Forbidden");
   }
 
   await user.remove();

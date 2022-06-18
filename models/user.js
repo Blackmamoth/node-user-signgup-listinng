@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema({
     unique: [true, "Phone number already in use"],
   },
   dob: {
-    type: Date,
+    type: String,
     required: [true, "DOB required"],
   },
   country: {
@@ -43,10 +43,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  privilege: {
+  roles: {
     type: String,
-    enum: ["admin", "read", "readwrite"],
-    default: "read",
+    enum: ['view', 'add', 'none'],
+    default: 'none'
   },
   medicines: {
     type: [String],
