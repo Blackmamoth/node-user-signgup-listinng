@@ -11,12 +11,14 @@ const getCountries = asyncHandler(async (req, res) => {
 });
 
 const getStates = asyncHandler(async (req, res) => {
-  const states = await statesData();
+  const { country } = req.query;
+  const states = await statesData(country);
   res.json(states);
 });
 
 const getCities = asyncHandler(async (req, res) => {
-  const cities = await citiesData();
+  const { state } = req.query;
+  const cities = await citiesData(state);
   res.json(cities);
 });
 

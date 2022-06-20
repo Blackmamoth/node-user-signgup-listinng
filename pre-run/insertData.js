@@ -98,8 +98,8 @@ const insertState = async () => {
   }
 };
 
-const statesData = async () => {
-  const states = await State.find();
+const statesData = async (country) => {
+  const states = await State.find({ country_name: country });
   return states;
 };
 
@@ -110,8 +110,8 @@ const insertCity = async () => {
   console.log("Done");
 };
 
-const citiesData = async () => {
-  const cities = await City.find();
+const citiesData = async (state) => {
+  const cities = await City.find({ state_name: state });
   return cities;
 };
 
