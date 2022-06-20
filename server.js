@@ -45,6 +45,16 @@ app.get("/resetPassword/reset/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+app.get("/uploads/images/:id", (req, res) => {
+  res.sendFile(path.join(__dirname, "uploads", "images", req.params.id));
+  res.setHeader("content-type", "image/jpeg");
+});
+
+app.get("/uploads/videos/:id", (req, res) => {
+  res.sendFile(path.join(__dirname, "uploads", "videos", req.params.id));
+  res.setHeader("content-type", "video/mp4");
+});
+
 app.get("**", (req, res) => {
   res.redirect("/users");
 });
