@@ -55,6 +55,11 @@ app.get("/uploads/videos/:id", (req, res) => {
   res.setHeader("content-type", "video/mp4");
 });
 
+app.get("/uploads/documents/:id", (req, res) => {
+  res.sendFile(path.join(__dirname, "uploads", "documents", req.params.id));
+  res.setHeader("content-type", "text/plain");
+});
+
 app.get("**", (req, res) => {
   res.redirect("/users");
 });
