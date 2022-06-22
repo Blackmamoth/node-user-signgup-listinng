@@ -9,7 +9,7 @@ const sendMail = (to, msg) => {
     service: "gmail",
     auth: {
       user: "testmyjarvis@gmail.com",
-      pass: "pivalvehsnbztqrw",
+      pass: process.env.EMAIL_PASS,
     },
   });
 
