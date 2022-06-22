@@ -5936,7 +5936,8 @@ let UserFormComponent = /*#__PURE__*/(() => {
                 this.adminMode = true;
               }
             });
-            this.cities = [user.city];
+            this.countryChanged();
+            this.stateChanged();
           });
         }
       });

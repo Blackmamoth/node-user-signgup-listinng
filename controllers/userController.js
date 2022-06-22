@@ -123,7 +123,8 @@ const updateUser = asyncHandler(async (req, res) => {
     throw new Error("Unauthorized");
   }
 
-  if (req.user.role !== "add" && !req.user.admin) {
+  if (req.user.roles !== "add" && !req.user.admin) {
+    console.log(req.user.roles);
     res.status(403).json({ message: "Forbidden" });
     throw new Error("Forbidden");
   }
