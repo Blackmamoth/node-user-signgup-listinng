@@ -5447,11 +5447,11 @@ __webpack_require__.r(__webpack_exports__);
 function UserFormComponent_div_15_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "label", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "label", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Password");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](4, "input", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](4, "input", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -5459,7 +5459,7 @@ function UserFormComponent_div_15_Template(rf, ctx) {
 
 function UserFormComponent_option_31_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -5474,7 +5474,7 @@ function UserFormComponent_option_31_Template(rf, ctx) {
 
 function UserFormComponent_option_37_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -5489,7 +5489,7 @@ function UserFormComponent_option_37_Template(rf, ctx) {
 
 function UserFormComponent_option_43_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -5504,8 +5504,8 @@ function UserFormComponent_option_43_Template(rf, ctx) {
 
 function UserFormComponent_div_49_div_6_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 32);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "input", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "input", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 
@@ -5525,7 +5525,7 @@ function UserFormComponent_div_49_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Medicines");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "button", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "button", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function UserFormComponent_div_49_Template_button_click_4_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r14);
       const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
@@ -5533,7 +5533,7 @@ function UserFormComponent_div_49_Template(rf, ctx) {
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, "Add Medicine");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](6, UserFormComponent_div_49_div_6_Template, 2, 1, "div", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](6, UserFormComponent_div_49_div_6_Template, 2, 1, "div", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
@@ -5545,30 +5545,51 @@ function UserFormComponent_div_49_Template(rf, ctx) {
   }
 }
 
-function UserFormComponent_option_55_Template(rf, ctx) {
+function UserFormComponent_div_50_option_5_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "option", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
-    const role_r15 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("value", role_r15);
+    const role_r16 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpropertyInterpolate"]("value", role_r16);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](role_r15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](role_r16);
   }
 }
 
-function UserFormComponent_button_59_Template(rf, ctx) {
+function UserFormComponent_div_50_Template(rf, ctx) {
   if (rf & 1) {
-    const _r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "label", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Role");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "select", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](5, UserFormComponent_div_50_option_5_Template, 2, 2, "option", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+  }
+
+  if (rf & 2) {
+    const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r5.roles);
+  }
+}
+
+function UserFormComponent_button_54_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function UserFormComponent_button_59_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r17);
-      const ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return ctx_r16.onCancel();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function UserFormComponent_button_54_Template_button_click_0_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r18);
+      const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return ctx_r17.onCancel();
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, " Cancel ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -5814,9 +5835,9 @@ let UserFormComponent = /*#__PURE__*/(() => {
     outputs: {
       userAdd: "userAdd"
     },
-    decls: 60,
+    decls: 55,
     vars: 12,
-    consts: [[1, "container", 3, "formGroup", "ngSubmit"], [1, "mb-3"], [1, "row", "mb-3"], ["for", "username", 1, "col-sm-1", "h5"], [1, "col-sm-5"], ["type", "text", "id", "username", "formControlName", "username", 1, "form-control", "border-secondary"], ["for", "email", 1, "col-sm-1", "h5"], ["type", "email", "id", "email", "formControlName", "email", 1, "form-control", "border-secondary"], ["class", "row mb-3", 4, "ngIf"], ["for", "phone", 1, "col-sm-1", "h5"], ["type", "number", "id", "phone", "formControlName", "phone", 1, "form-control", "border-secondary"], ["for", "dob", 1, "col-sm-1", "h5"], ["type", "date", "id", "dob", "formControlName", "dob", 1, "form-control", "border-secondary"], ["for", "country", 1, "col-sm-1", "h5"], ["id", "country", "formControlName", "country", 1, "form-control", "border-secondary", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "state", 1, "col-sm-1", "h5"], ["id", "state", "formControlName", "state", 1, "form-control", "border-secondary", 3, "change"], ["for", "city", 1, "col-sm-1", "h5"], ["id", "city", "formControlName", "city", 1, "form-control", "border-secondary"], ["for", "pinCode", 1, "col-sm-1", "h5"], ["type", "number", "formControlName", "pinCode", "id", "pinCode", 1, "form-control", "border-secondary", 3, "maxlength"], ["for", "role", 1, "col-sm-1", "h5"], ["id", "role", "formControlName", "role", 1, "form-control", "border-secondary"], [1, "ro", "mb-3"], ["type", "submit", 1, "btn", "me-2", 3, "ngClass"], ["type", "button", "class", "btn btn-danger", 3, "click", 4, "ngIf"], ["for", "password", 1, "col-sm-1", "h5"], ["type", "password", "id", "password", "formControlName", "password", 1, "form-control", "border-secondary"], [3, "value"], ["type", "button", 1, "btn", "btn-primary", "btn-sm", 3, "click"], ["class", "mt-2", 4, "ngFor", "ngForOf"], [1, "mt-2"], ["type", "text", "placeholder", "Medicine name", 1, "form-control", "form-control-sm", "w-50", "border-secondary", 3, "formControlName"], ["type", "button", 1, "btn", "btn-danger", 3, "click"]],
+    consts: [[1, "container", 3, "formGroup", "ngSubmit"], [1, "mb-3"], [1, "row", "mb-3"], ["for", "username", 1, "col-sm-1", "h5"], [1, "col-sm-5"], ["type", "text", "id", "username", "formControlName", "username", 1, "form-control", "border-secondary"], ["for", "email", 1, "col-sm-1", "h5"], ["type", "email", "id", "email", "formControlName", "email", 1, "form-control", "border-secondary"], ["class", "row mb-3", 4, "ngIf"], ["for", "phone", 1, "col-sm-1", "h5"], ["type", "number", "id", "phone", "formControlName", "phone", 1, "form-control", "border-secondary"], ["for", "dob", 1, "col-sm-1", "h5"], ["type", "date", "id", "dob", "formControlName", "dob", 1, "form-control", "border-secondary"], ["for", "country", 1, "col-sm-1", "h5"], ["id", "country", "formControlName", "country", 1, "form-control", "border-secondary", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "state", 1, "col-sm-1", "h5"], ["id", "state", "formControlName", "state", 1, "form-control", "border-secondary", 3, "change"], ["for", "city", 1, "col-sm-1", "h5"], ["id", "city", "formControlName", "city", 1, "form-control", "border-secondary"], ["for", "pinCode", 1, "col-sm-1", "h5"], ["type", "number", "formControlName", "pinCode", "id", "pinCode", 1, "form-control", "border-secondary", 3, "maxlength"], [1, "ro", "mb-3"], ["type", "submit", 1, "btn", "me-2", 3, "ngClass"], ["type", "button", "class", "btn btn-danger", 3, "click", 4, "ngIf"], ["for", "password", 1, "col-sm-1", "h5"], ["type", "password", "id", "password", "formControlName", "password", 1, "form-control", "border-secondary"], [3, "value"], ["type", "button", 1, "btn", "btn-primary", "btn-sm", 3, "click"], ["class", "mt-2", 4, "ngFor", "ngForOf"], [1, "mt-2"], ["type", "text", "placeholder", "Medicine name", 1, "form-control", "form-control-sm", "w-50", "border-secondary", 3, "formControlName"], ["for", "role", 1, "col-sm-1", "h5"], ["id", "role", "formControlName", "role", 1, "form-control", "border-secondary"], ["type", "button", 1, "btn", "btn-danger", 3, "click"]],
     template: function UserFormComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
@@ -5907,21 +5928,12 @@ let UserFormComponent = /*#__PURE__*/(() => {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](49, UserFormComponent_div_49_Template, 7, 1, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](50, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](51, "label", 22);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](52, "Role");
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](50, UserFormComponent_div_50_Template, 6, 1, "div", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](51, "div", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](52, "button", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](53);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](53, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](54, "select", 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](55, UserFormComponent_option_55_Template, 2, 2, "option", 15);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](56, "div", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](57, "button", 25);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](58);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](59, UserFormComponent_button_59_Template, 2, 0, "button", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](54, UserFormComponent_button_54_Template, 2, 0, "button", 24);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -5944,8 +5956,8 @@ let UserFormComponent = /*#__PURE__*/(() => {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("maxlength", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.editMode);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.roles);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.adminMode);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", ctx.editMode ? "btn-success" : "btn-primary");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
