@@ -106,6 +106,7 @@ const addUser = asyncHandler(async (req, res) => {
     username: user.username,
     email: user.email,
     success: true,
+    token: generateToken(user._id),
   });
 });
 
