@@ -8,10 +8,26 @@ const {
   getDocument,
 } = require("../controllers/mediaController");
 const multer = require("multer");
-const imgUpload = multer({ dest: "uploads/images" });
+const imgUpload = multer({
+  dest: "uploads/images",
+  fileFilter: (_req, file, cb) => {
+    if (file.mimetype !== "image") {
+      return cb("Error: Only images can be uploaded on this route", false);
+    }
+    return cb(null, true);
+  },
+});
 const vidUpload = multer({ dest: "uploads/videos" });
 const docUpload = multer({ dest: "uploads/documents" });
 const { protectedRoute } = require("../middleware/authMiddleware");
+
+const checkImageMimeType = (file, cb) => {
+  const mimeType = file.mimetype.split("/")[0];
+  if (mimeType !== "image") {
+    return cb("Error", "Image only");
+  }
+  return cb(null, true);
+};
 
 router
   .route("/uploadImg")
