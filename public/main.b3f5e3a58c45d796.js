@@ -7158,7 +7158,7 @@ function UsersComponent_form_0_Template(rf, ctx) {
 function UsersComponent_h3_4_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "h3", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "No users with those attribute found");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "No users with those attribute found ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
@@ -7222,6 +7222,7 @@ let UsersComponent = /*#__PURE__*/(() => {
 
       if (!id && !username && country === 'Country' && !pinCode && role === 'Role') {
         this.filteredUsers = null;
+        this.noFilteredUsers = false;
         return;
       }
 
