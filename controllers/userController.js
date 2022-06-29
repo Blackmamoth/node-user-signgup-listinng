@@ -128,7 +128,9 @@ const updateUser = asyncHandler(async (req, res) => {
     new: true,
   });
 
-  res.status(200).json({ updatedUser, success: true });
+  const newUser = await User.findById(req.params.id).select("-password");
+
+  res.status(200).json({ newUser, success: true });
 });
 
 const deleteUser = asyncHandler(async (req, res) => {

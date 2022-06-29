@@ -8,7 +8,6 @@ const uploadImage = asyncHandler(async (req, res) => {
     name: req.file.filename,
     user: req.user._id,
   };
-  console.log(req.file);
   const userImage = await Media.findOne({ user: req.user.id });
   if (userImage) {
     const newImage = await Media.findByIdAndUpdate(userImage._id, obj, {
@@ -66,6 +65,7 @@ const uploadDocument = asyncHandler(async (req, res) => {
   const obj = {
     name: req.file.filename,
     user: req.user._id,
+    filename: req.file.originalname,
   };
   const userDocument = await Document.findOne({ user: req.user.id });
   if (userDocument) {

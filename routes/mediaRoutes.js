@@ -10,12 +10,6 @@ const {
 const multer = require("multer");
 const imgUpload = multer({
   dest: "uploads/images",
-  fileFilter: (_req, file, cb) => {
-    if (file.mimetype !== "image") {
-      return cb("Error: Only images can be uploaded on this route", false);
-    }
-    return cb(null, true);
-  },
 });
 const vidUpload = multer({ dest: "uploads/videos" });
 const docUpload = multer({ dest: "uploads/documents" });

@@ -25,6 +25,10 @@ const videoSchema = new mongoose.Schema({
 });
 
 const documentSchema = new mongoose.Schema({
+  filename: {
+    type: String,
+    required: [true, "File name required"],
+  },
   name: {
     type: String,
     required: [true, "Document name required"],
