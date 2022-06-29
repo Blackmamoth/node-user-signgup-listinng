@@ -6706,10 +6706,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function UserMedicinesComponent_table_15_tr_8_Template(rf, ctx) {
+function UserMedicinesComponent_h1_13_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "h1");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "User has no medicine prescribed");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+  }
+}
+
+function UserMedicinesComponent_table_14_tr_8_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "th", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "th", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "td");
@@ -6719,38 +6727,38 @@ function UserMedicinesComponent_table_15_tr_8_Template(rf, ctx) {
   }
 
   if (rf & 2) {
-    const medicine_r2 = ctx.$implicit;
-    const i_r3 = ctx.index;
+    const medicine_r3 = ctx.$implicit;
+    const i_r4 = ctx.index;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](i_r3 + 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](i_r4 + 1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](medicine_r2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](medicine_r3);
   }
 }
 
-function UserMedicinesComponent_table_15_Template(rf, ctx) {
+function UserMedicinesComponent_table_14_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "table", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "table", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "thead");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "th", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "th", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "Sr. no");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "th", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "th", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "Medicines");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "tbody");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, UserMedicinesComponent_table_15_tr_8_Template, 5, 2, "tr", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, UserMedicinesComponent_table_14_tr_8_Template, 5, 2, "tr", 13);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
-    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r0.medicines);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r1.medicines);
   }
 }
 
@@ -6765,6 +6773,7 @@ let UserMedicinesComponent = /*#__PURE__*/(() => {
       this.router = router; // user: User;
 
       this.medicines = [];
+      this.noMedicines = true;
     }
 
     ngOnInit() {
@@ -6772,6 +6781,10 @@ let UserMedicinesComponent = /*#__PURE__*/(() => {
       this._id = userData._id;
       this.userService.getUser(this._id).subscribe(user => {
         this.medicines = user.medicines;
+
+        if (this.medicines.length > 0) {
+          this.noMedicines = false;
+        }
       });
     }
 
@@ -6784,9 +6797,9 @@ let UserMedicinesComponent = /*#__PURE__*/(() => {
   UserMedicinesComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
     type: UserMedicinesComponent,
     selectors: [["app-user-medicines"]],
-    decls: 16,
-    vars: 5,
-    consts: [[1, "container"], [1, "row"], [1, "col-sm-9"], [1, "data-block"], [1, "elusive", "icon-calendar"], [1, "data-header-actions"], [1, "demoTabs", 3, "routerLink"], [1, "btn", "btn-alt", 3, "routerLink"], [2, "padding", "1em"], ["class", "table", 4, "ngIf"], [1, "table"], ["scope", "col"], [4, "ngFor", "ngForOf"], ["scope", "row"]],
+    decls: 15,
+    vars: 6,
+    consts: [[1, "container"], [1, "row"], [1, "col-sm-9"], [1, "data-block"], [1, "elusive", "icon-calendar"], [1, "data-header-actions"], [1, "demoTabs", 3, "routerLink"], [1, "btn", "btn-alt", 3, "routerLink"], [2, "padding", "1em"], [4, "ngIf"], ["class", "table", 4, "ngIf"], [1, "table"], ["scope", "col"], [4, "ngFor", "ngForOf"], ["scope", "row"]],
     template: function UserMedicinesComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -6807,10 +6820,8 @@ let UserMedicinesComponent = /*#__PURE__*/(() => {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "User has no medicine prescribed");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, UserMedicinesComponent_table_15_Template, 9, 1, "table", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, UserMedicinesComponent_h1_13_Template, 2, 0, "h1", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, UserMedicinesComponent_table_14_Template, 9, 1, "table", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -6822,8 +6833,10 @@ let UserMedicinesComponent = /*#__PURE__*/(() => {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("routerLink", "active");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](3, _c0, ctx._id));
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpureFunction1"](4, _c0, ctx._id));
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.noMedicines);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.medicines.length > 0);
       }
     },
@@ -7167,6 +7180,8 @@ function UsersListComponent_div_0_Template(rf, ctx) {
 
 function UsersListComponent_article_1_Template(rf, ctx) {
   if (rf & 1) {
+    const _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
+
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "article", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "div", 12);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](2, "header");
@@ -7208,6 +7223,16 @@ function UsersListComponent_article_1_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](29, "li");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](30, "span", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](32, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](33, "button", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function UsersListComponent_article_1_Template_button_click_33_listener() {
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r18);
+      const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
+      return ctx_r17.edit(ctx_r17.user);
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](34, "Update Profile");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
@@ -7345,11 +7370,11 @@ let UsersListComponent = /*#__PURE__*/(() => {
     },
     decls: 2,
     vars: 2,
-    consts: [["class", "row", 4, "ngIf"], ["class", "col-sm-4", "style", "width: 250px", 4, "ngIf"], [1, "row"], [3, "pageChange"], [1, "table-responsive"], [1, "table", "table-striped", "table-bordered", "table-hover"], [4, "ngIf"], [4, "ngFor", "ngForOf"], [3, "ngClass"], ["type", "button", 1, "btn", "btn", "btn-inverse", "me-2", 2, "padding", "5px", "margin-right", "3px", 3, "click"], ["type", "button", 1, "btn", "btn-danger", 2, "padding", "5px", "margin-left", "3px", 3, "click"], [1, "col-sm-4", 2, "width", "250px"], [1, "data-block"], [1, "list-unstyled"], [1, "elusive", "icon-ok"]],
+    consts: [["class", "row", 4, "ngIf"], ["class", "col-sm-4", "style", "width: 250px", 4, "ngIf"], [1, "row"], [3, "pageChange"], [1, "table-responsive"], [1, "table", "table-striped", "table-bordered", "table-hover"], [4, "ngIf"], [4, "ngFor", "ngForOf"], [3, "ngClass"], ["type", "button", 1, "btn", "btn", "btn-inverse", "me-2", 2, "padding", "5px", "margin-right", "3px", 3, "click"], ["type", "button", 1, "btn", "btn-danger", 2, "padding", "5px", "margin-left", "3px", 3, "click"], [1, "col-sm-4", 2, "width", "250px"], [1, "data-block"], [1, "list-unstyled"], [1, "elusive", "icon-ok"], ["type", "button", 1, "btn", "btn-primary", 3, "click"]],
     template: function UsersListComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, UsersListComponent_div_0_Template, 31, 3, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](1, UsersListComponent_article_1_Template, 32, 10, "article", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](1, UsersListComponent_article_1_Template, 35, 10, "article", 1);
       }
 
       if (rf & 2) {

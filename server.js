@@ -33,6 +33,14 @@ app.get("/users/edit/:id", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+app.get("/users/media", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+app.get("/users/medicines", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 app.get("/register", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
