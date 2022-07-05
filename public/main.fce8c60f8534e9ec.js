@@ -4851,6 +4851,13 @@ let HeaderComponent = /*#__PURE__*/(() => {
       });
     }
 
+    onClickNavbar() {
+      const btn = document.querySelector('#navBtn');
+      const mainNav = document.querySelector('#mainNav');
+      btn.classList.toggle('collapsed');
+      mainNav.classList.toggle('in');
+    }
+
     logoutUser() {
       console.log('clicked');
       this.authService.logoutUser();
@@ -4870,7 +4877,7 @@ let HeaderComponent = /*#__PURE__*/(() => {
     selectors: [["app-header"]],
     decls: 20,
     vars: 4,
-    consts: [["id", "header", 1, "container"], ["role", "navigation", 1, "main-navigation", "navbar", "navbar-default"], [1, "navbar-header"], ["type", "button", "data-toggle", "collapse", "data-target", ".main-navigation-collapse", 1, "navbar-toggle"], [1, "elusive", "icon-home"], [1, "main-navigation-collapse", "collapse", "navbar-collapse"], [1, "nav", "navbar-nav"], [1, "active"], ["routerLink", "/"], ["class", "dropdown", 4, "ngIf"], [1, "dropdown"], ["class", "dropdown-toggle", "data-toggle", "dropdown", 3, "click", 4, "ngIf"], [4, "ngIf"], ["routerLink", "/", "data-toggle", "dropdown", 1, "dropdown-toggle"], [1, "elusive", "icon-asl"], ["data-toggle", "dropdown", 1, "dropdown-toggle", 3, "click"], [1, "elusive", "icon-file"], ["routerLink", "register"], [1, "elusive", "icon-info-sign"], ["routerLink", "login"]],
+    consts: [["id", "header", 1, "container"], ["role", "navigation", 1, "main-navigation", "navbar", "navbar-default"], [1, "navbar-header"], ["type", "button", "id", "navBtn", "data-toggle", "collapse", "data-target", ".main-navigation-collapse", 1, "navbar-toggle", 3, "click"], [1, "elusive", "icon-home"], ["id", "mainNav", 1, "main-navigation-collapse", "collapse", "navbar-collapse"], [1, "nav", "navbar-nav"], [1, "active"], ["routerLink", "/"], ["class", "dropdown", 4, "ngIf"], [1, "dropdown"], ["class", "dropdown-toggle", "data-toggle", "dropdown", 3, "click", 4, "ngIf"], [4, "ngIf"], ["routerLink", "/", "data-toggle", "dropdown", 1, "dropdown-toggle"], [1, "elusive", "icon-asl"], ["data-toggle", "dropdown", 1, "dropdown-toggle", 3, "click"], [1, "elusive", "icon-file"], ["routerLink", "register"], [1, "elusive", "icon-info-sign"], ["routerLink", "login"]],
     template: function HeaderComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "header", 0);
@@ -4882,6 +4889,9 @@ let HeaderComponent = /*#__PURE__*/(() => {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "nav", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "button", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HeaderComponent_Template_button_click_6_listener() {
+          return ctx.onClickNavbar();
+        });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "span", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, " Sangoma ");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -5066,71 +5076,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function MediaUploadComponent_div_0_div_1_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-  }
-
-  if (rf & 2) {
-    const message_r10 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](message_r10);
-  }
-}
-
 function MediaUploadComponent_div_0_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, MediaUploadComponent_div_0_div_1_Template, 2, 1, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "strong");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 
   if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r0.errors);
-  }
-}
-
-function MediaUploadComponent_div_1_div_1_Template(rf, ctx) {
-  if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 29);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-  }
-
-  if (rf & 2) {
-    const message_r12 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](message_r12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵclassMapInterpolate1"]("alert alert-", ctx_r0.alertState, " alert-dismissable fade in");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](ctx_r0.alertMessage);
   }
 }
 
 function MediaUploadComponent_div_1_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, MediaUploadComponent_div_1_div_1_Template, 2, 1, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](1, "li");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](2, "span", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-  }
-
-  if (rf & 2) {
-    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx_r1.success);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
   }
 }
 
 function MediaUploadComponent_button_25_Template(rf, ctx) {
   if (rf & 1) {
-    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    const _r10 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function MediaUploadComponent_button_25_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r14);
-      const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return ctx_r13.removeImage();
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r10);
+      const ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return ctx_r9.removeImage();
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "Remove");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -5139,7 +5120,7 @@ function MediaUploadComponent_button_25_Template(rf, ctx) {
 
 function MediaUploadComponent_img_28_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 14);
   }
 
   if (rf & 2) {
@@ -5162,13 +5143,13 @@ function MediaUploadComponent_video_29_Template(rf, ctx) {
 
 function MediaUploadComponent_button_35_Template(rf, ctx) {
   if (rf & 1) {
-    const _r16 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    const _r12 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function MediaUploadComponent_button_35_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r16);
-      const ctx_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return ctx_r15.removeVideo();
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r12);
+      const ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return ctx_r11.removeVideo();
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "Remove");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -5177,7 +5158,7 @@ function MediaUploadComponent_button_35_Template(rf, ctx) {
 
 function MediaUploadComponent_img_38_Template(rf, ctx) {
   if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 14);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](1, "sanitizeUrl");
   }
 
@@ -5203,13 +5184,13 @@ function MediaUploadComponent_p_39_Template(rf, ctx) {
 
 function MediaUploadComponent_button_45_Template(rf, ctx) {
   if (rf & 1) {
-    const _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
+    const _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "button", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function MediaUploadComponent_button_45_Template_button_click_0_listener() {
-      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r18);
-      const ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-      return ctx_r17.removeDocument();
+      _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵrestoreView"](_r14);
+      const ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
+      return ctx_r13.removeDocument();
     });
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](1, "Remove");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -5232,8 +5213,10 @@ let MediaUploadComponent = /*#__PURE__*/(() => {
       this.mediaService = mediaService;
       this.router = router;
       this.userData = JSON.parse(localStorage.getItem('userData'));
-      this.success = [];
-      this.errors = [];
+      this.alertState = 'success';
+      this.alertMessage = null;
+      this.showAlert = false;
+      this.loading = false;
       this.imgSrc = "img/sample_content/upload-250x150.png";
       this.videoSrc = 'img/sample_content/upload-250x150.png';
       this.documentSrc = 'img/sample_content/upload-250x150.png';
@@ -5308,7 +5291,6 @@ let MediaUploadComponent = /*#__PURE__*/(() => {
     onChangeDocument(event) {
       const files = event.target.files;
       this.documentFile = files[0];
-      console.log(files[0]);
       this.documentFileName = files[0].name;
     }
 
@@ -5318,35 +5300,56 @@ let MediaUploadComponent = /*#__PURE__*/(() => {
 
     onUpload() {
       if (this.imageFile) {
+        this.loading = true;
         this.mediaService.uploadImage(this.imageFile).subscribe(response => {
           if (!response.success) {
-            this.errors.push('Error occured while uploading profile pic');
+            this.alertMessage = 'Error, Something went wrong';
+            this.alertState = 'danger';
           } else {
-            this.success.push('Image upload succcessful');
+            this.alertMessage = 'Success, File uploaded successfully';
+            this.alertState = 'success';
             this.imageUpdate();
           }
+
+          this.loading = false;
+          this.showAlert = true;
+          setTimeout(() => this.showAlert = false, 5000);
         });
       }
 
       if (this.videoFile) {
+        this.loading = true;
         this.mediaService.uploadVideo(this.videoFile).subscribe(response => {
           if (!response.success) {
-            this.errors.push('Error occured while uploading Video');
+            this.alertMessage = 'Error, Something went wrong';
+            this.alertState = 'danger';
           } else {
-            this.success.push('Video Upload successful');
+            this.alertMessage = 'Success, File uploaded successfully';
+            this.alertState = 'success';
             this.videoUpdate();
           }
+
+          this.loading = false;
+          this.showAlert = true;
+          setTimeout(() => this.showAlert = false, 5000);
         });
       }
 
       if (this.documentFile) {
+        this.loading = true;
         this.mediaService.uploadDocument(this.documentFile).subscribe(response => {
           if (!response.success) {
-            this.errors.push('Error occured while uploading Document');
+            this.alertMessage = 'Error, Something went wrong';
+            this.alertState = 'danger';
           } else {
-            this.success.push('Document upload successful');
+            this.alertMessage = 'Success, File uploaded successfully';
+            this.alertState = 'success';
             this.documentUpdate();
           }
+
+          this.loading = false;
+          this.showAlert = true;
+          setTimeout(() => this.showAlert = false, 5000);
         });
       }
 
@@ -5405,95 +5408,95 @@ let MediaUploadComponent = /*#__PURE__*/(() => {
     selectors: [["app-media-upload"]],
     decls: 51,
     vars: 24,
-    consts: [[4, "ngIf"], [1, "p-2"], [1, "row"], [1, "col-sm-9"], [1, "data-block"], [1, "elusive", "icon-calendar"], [1, "data-header-actions"], [1, "demoTabs", 3, "routerLink"], [1, "btn", "btn-alt", 3, "routerLink"], ["enctype", "multipart/form-data", 3, "formGroup", "ngSubmit"], [2, "padding", "1em"], ["data-provides", "fileupload", 1, "fileupload", "fileupload-new"], [1, "fileupload-preview", "fileupload-large", "thumbnail"], [3, "src"], [1, "btn", "btn-default", "btn-file"], [1, "fileupload-new"], ["type", "file", "formControlName", "profilePic", "accept", "image/*", 3, "change"], ["type", "button", "class", "fileupload-new btn btn-danger", "style", "margin-left: 1em;", 3, "click", 4, "ngIf"], [3, "src", 4, "ngIf"], ["autoplay", "", 3, "src", 4, "ngIf"], ["type", "file", "formControlName", "someVideo", "accept", "video/*", 3, "change"], [1, "fileupload-preview", "thumbnail", 3, "ngClass"], ["type", "file", "formControlName", "profilePic", "accept", "text/* || application/*", 3, "change"], [1, "mb-3", "mt-3"], ["type", "submit", 1, "btn", "btn-primary", "me-2", 2, "margin-right", "1em", 3, "disabled"], ["type", "button", 1, "btn", "btn-danger", 3, "click"], ["class", "alert alert-danger", 4, "ngFor", "ngForOf"], [1, "alert", "alert-danger"], ["class", "alert alert-success", 4, "ngFor", "ngForOf"], [1, "alert", "alert-success"], ["type", "button", 1, "fileupload-new", "btn", "btn-danger", 2, "margin-left", "1em", 3, "click"], ["autoplay", "", 3, "src"]],
+    consts: [[3, "class", 4, "ngIf"], ["style", "margin: 0 50%;", 4, "ngIf"], [1, "p-2"], [1, "row"], [1, "col-sm-9"], [1, "data-block"], [1, "elusive", "icon-calendar"], [1, "data-header-actions"], [1, "demoTabs", 3, "routerLink"], [1, "btn", "btn-alt", 3, "routerLink"], ["enctype", "multipart/form-data", 3, "formGroup", "ngSubmit"], [2, "padding", "1em"], ["data-provides", "fileupload", 1, "fileupload", "fileupload-new"], [1, "fileupload-preview", "fileupload-large", "thumbnail"], [3, "src"], [1, "btn", "btn-default", "btn-file"], [1, "fileupload-new"], ["type", "file", "formControlName", "profilePic", "accept", "image/*", 3, "change"], ["type", "button", "class", "fileupload-new btn btn-danger", "style", "margin-left: 1em;", 3, "click", 4, "ngIf"], [3, "src", 4, "ngIf"], ["autoplay", "", 3, "src", 4, "ngIf"], ["type", "file", "formControlName", "someVideo", "accept", "video/*", 3, "change"], [1, "fileupload-preview", "thumbnail", 3, "ngClass"], [4, "ngIf"], ["type", "file", "formControlName", "profilePic", "accept", "text/* || application/*", 3, "change"], [1, "mb-3", "mt-3"], ["type", "submit", 1, "btn", "btn-primary", "me-2", 2, "margin-right", "1em", 3, "disabled"], ["type", "button", 1, "btn", "btn-danger", 3, "click"], [2, "margin", "0 50%"], [1, "loading", "dark"], ["type", "button", 1, "fileupload-new", "btn", "btn-danger", 2, "margin-left", "1em", 3, "click"], ["autoplay", "", 3, "src"]],
     template: function MediaUploadComponent_Template(rf, ctx) {
       if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, MediaUploadComponent_div_0_Template, 2, 1, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, MediaUploadComponent_div_1_Template, 2, 1, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "article", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, MediaUploadComponent_div_0_Template, 3, 4, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, MediaUploadComponent_div_1_Template, 3, 0, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](2, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "article", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](5, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "header");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "h2");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](8, "span", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](8, "span", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](9, " Upload Media");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "ul", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "li", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](12, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](10, "ul", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](11, "li", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](12, "a", 9);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](13, "Update Profile");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "form", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](14, "form", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("ngSubmit", function MediaUploadComponent_Template_form_ngSubmit_14_listener() {
           return ctx.onUpload();
         });
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](18, "img", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](15, "div", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](16, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](18, "img", 14);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipe"](19, "sanitizeUrl");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](20, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](21, "span", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](22, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](21, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](22, "span", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](23);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](24, "input", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](24, "input", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("change", function MediaUploadComponent_Template_input_change_24_listener($event) {
           return ctx.onChangeImage($event);
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](25, MediaUploadComponent_button_25_Template, 2, 0, "button", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](25, MediaUploadComponent_button_25_Template, 2, 0, "button", 18);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](26, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](27, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](28, MediaUploadComponent_img_28_Template, 1, 1, "img", 18);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](29, MediaUploadComponent_video_29_Template, 2, 3, "video", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](26, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](27, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](28, MediaUploadComponent_img_28_Template, 1, 1, "img", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](29, MediaUploadComponent_video_29_Template, 2, 3, "video", 20);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](30, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](31, "span", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](32, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](31, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](32, "span", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](33);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](34, "input", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](34, "input", 21);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("change", function MediaUploadComponent_Template_input_change_34_listener($event) {
           return ctx.onChangeVideo($event);
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](35, MediaUploadComponent_button_35_Template, 2, 0, "button", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](35, MediaUploadComponent_button_35_Template, 2, 0, "button", 18);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](36, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](37, "div", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](38, MediaUploadComponent_img_38_Template, 2, 3, "img", 18);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](39, MediaUploadComponent_p_39_Template, 2, 1, "p", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](36, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](37, "div", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](38, MediaUploadComponent_img_38_Template, 2, 3, "img", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](39, MediaUploadComponent_p_39_Template, 2, 1, "p", 23);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](40, "div");
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](41, "span", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](42, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](41, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](42, "span", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](43);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](44, "input", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](44, "input", 24);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("change", function MediaUploadComponent_Template_input_change_44_listener($event) {
           return ctx.onChangeDocument($event);
         });
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](45, MediaUploadComponent_button_45_Template, 2, 0, "button", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](45, MediaUploadComponent_button_45_Template, 2, 0, "button", 18);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](46, "div", 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](47, "button", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](46, "div", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](47, "button", 26);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](48, "Upload");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](49, "button", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](49, "button", 27);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵlistener"]("click", function MediaUploadComponent_Template_button_click_49_listener() {
           return ctx.onCancel();
         });
@@ -5509,9 +5512,9 @@ let MediaUploadComponent = /*#__PURE__*/(() => {
       }
 
       if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.errors);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.showAlert);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.success);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.loading);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](10);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("routerLink", "active");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
@@ -5546,7 +5549,7 @@ let MediaUploadComponent = /*#__PURE__*/(() => {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("disabled", !ctx.mediaForm.valid);
       }
     },
-    directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLink, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLinkWithHref, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControlName, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf],
+    directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLink, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLinkWithHref, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControlName, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgClass],
     pipes: [_sanitize_url_pipe__WEBPACK_IMPORTED_MODULE_1__.SanitizeUrlPipe],
     styles: ["input.ng-invalid.ng-touched[_ngcontent-%COMP%] {\r\n    border: 1px solid red\r\n}\r\n\r\n.row[_ngcontent-%COMP%] {\r\n    width: 70em;\r\n}\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .row[_ngcontent-%COMP%] {\r\n        width: 50em;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 746px) {\r\n    .row[_ngcontent-%COMP%] {\r\n        width: 32em;\r\n    }\r\n}"]
   });
