@@ -4477,7 +4477,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -15258,7 +15258,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -26039,7 +26039,7 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -36815,12 +36815,12 @@ button.close {
 }
 .modal-backdrop {
   position: fixed;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -47596,12 +47596,12 @@ button.close {
 }
 .modal-backdrop {
   position: fixed;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -58377,12 +58377,12 @@ button.close {
 }
 .modal-backdrop {
   position: fixed;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -69158,12 +69158,12 @@ button.close {
 }
 .modal-backdrop {
   position: fixed;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;
@@ -79939,12 +79939,12 @@ button.close {
 }
 .modal-backdrop {
   position: fixed;
-  top: 0;
+  top: 10%;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 15%;
   z-index: 1040;
-  background-color: #000000;
+  /* background-color: #000000; */
 }
 .modal-backdrop.fade {
   opacity: 0;

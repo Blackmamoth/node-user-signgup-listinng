@@ -6072,7 +6072,13 @@ function UserFormComponent_button_70_Template(rf, ctx) {
   }
 }
 
-const _c3 = function (a0, a1) {
+const _c3 = function (a0) {
+  return {
+    "modal-backdrop": a0
+  };
+};
+
+const _c4 = function (a0, a1) {
   return {
     "btn-primary": a0,
     "btn-success": a1
@@ -6357,8 +6363,8 @@ let UserFormComponent = /*#__PURE__*/(() => {
       userAdd: "userAdd"
     },
     decls: 71,
-    vars: 23,
-    consts: [[1, "container"], ["class", "alert alert-success alert-dismissable fade in", 4, "ngIf"], [1, "row"], [1, "col-sm-9"], [1, "data-block"], [1, "elusive", "icon-calendar"], ["class", "data-header-actions", 4, "ngIf"], [1, "tab-content"], ["id", "horizontal", 1, "tab-pane", "active"], ["role", "form", 1, "form-horizontal", 3, "formGroup"], [1, "form-group"], ["for", "username", 1, "col-sm-2", "control-label"], [1, "col-sm-6"], ["type", "text", "formControlName", "username", "id", "username", "placeholder", "Enter Username", 1, "form-control"], [4, "ngIf"], ["for", "email", 1, "col-sm-2", "control-label"], ["formControlName", "email", "type", "email", "id", "email", "placeholder", "Enter Email", 1, "form-control"], ["class", "form-group", 4, "ngIf"], ["for", "phone", 1, "col-sm-2", "control-label"], ["type", "number", "formControlName", "phone", "id", "phone", "placeholder", "Enter Phone number", 1, "form-control"], ["for", "dob", 1, "col-sm-2", "control-label"], ["type", "date", "formControlName", "dob", "id", "dob", 1, "form-control"], ["for", "country", 1, "col-sm-2", "control-label"], [1, "col-sm-5"], ["id", "country", "formControlName", "country", 1, "form-control", 3, "change"], [3, "disabled", "value", 4, "ngFor", "ngForOf"], ["for", "state", 1, "col-sm-2", "control-label"], ["id", "state", "formControlName", "state", 1, "form-control", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "city", 1, "col-sm-2", "control-label"], ["id", "city", "formControlName", "city", 1, "form-control"], [3, "value", "disabled", 4, "ngFor", "ngForOf"], ["for", "pinCode", 1, "col-sm-2", "control-label"], ["type", "text", "formControlName", "pinCode", "id", "pinCode", "placeholder", "Enter Pin Code", 1, "form-control"], [1, "col-sm-offset-2", "col-sm-10"], ["type", "submit", 1, "btn", "btn-lg", 3, "ngClass", "click"], ["style", "margin-left: 0.5em;", "type", "submit", "class", "btn btn-lg btn-danger", 3, "click", 4, "ngIf"], [1, "alert", "alert-success", "alert-dismissable", "fade", "in"], ["type", "button", "data-dismiss", "alert", "aria-hidden", "true", "title", "Close alert", 1, "close"], [1, "data-header-actions"], [1, "demoTabs"], ["class", "btn btn-alt", 3, "routerLink", 4, "ngIf"], [1, "demoTabs", 3, "routerLink"], [1, "btn", "btn-alt", 3, "routerLink"], ["for", "password", 1, "col-sm-2", "control-label"], ["type", "password", "formControlName", "password", "id", "password", "placeholder", "Enter password", "minlength", "6", 1, "form-control"], [3, "disabled", "value"], [3, "value"], [3, "value", "disabled"], ["id", "city", "formControlName", "role", 1, "form-control"], ["type", "submit", 1, "btn", "btn-lg", "btn-danger", 2, "margin-left", "0.5em", 3, "click"]],
+    vars: 26,
+    consts: [[1, "container", 3, "ngClass"], ["class", "alert alert-success alert-dismissable fade in", 4, "ngIf"], [1, "row"], [1, "col-sm-9"], [1, "data-block"], [1, "elusive", "icon-calendar"], ["class", "data-header-actions", 4, "ngIf"], [1, "tab-content"], ["id", "horizontal", 1, "tab-pane", "active"], ["role", "form", 1, "form-horizontal", 3, "formGroup"], [1, "form-group"], ["for", "username", 1, "col-sm-2", "control-label"], [1, "col-sm-6"], ["type", "text", "formControlName", "username", "id", "username", "placeholder", "Enter Username", 1, "form-control"], [4, "ngIf"], ["for", "email", 1, "col-sm-2", "control-label"], ["formControlName", "email", "type", "email", "id", "email", "placeholder", "Enter Email", 1, "form-control"], ["class", "form-group", 4, "ngIf"], ["for", "phone", 1, "col-sm-2", "control-label"], ["type", "number", "formControlName", "phone", "id", "phone", "placeholder", "Enter Phone number", 1, "form-control"], ["for", "dob", 1, "col-sm-2", "control-label"], ["type", "date", "formControlName", "dob", "id", "dob", 1, "form-control"], ["for", "country", 1, "col-sm-2", "control-label"], [1, "col-sm-5"], ["id", "country", "formControlName", "country", 1, "form-control", 3, "change"], [3, "disabled", "value", 4, "ngFor", "ngForOf"], ["for", "state", 1, "col-sm-2", "control-label"], ["id", "state", "formControlName", "state", 1, "form-control", 3, "change"], [3, "value", 4, "ngFor", "ngForOf"], ["for", "city", 1, "col-sm-2", "control-label"], ["id", "city", "formControlName", "city", 1, "form-control"], [3, "value", "disabled", 4, "ngFor", "ngForOf"], ["for", "pinCode", 1, "col-sm-2", "control-label"], ["type", "text", "formControlName", "pinCode", "id", "pinCode", "placeholder", "Enter Pin Code", 1, "form-control"], [1, "col-sm-offset-2", "col-sm-10"], ["type", "submit", 1, "btn", "btn-lg", 3, "ngClass", "click"], ["style", "margin-left: 0.5em;", "type", "submit", "class", "btn btn-lg btn-danger", 3, "click", 4, "ngIf"], [1, "alert", "alert-success", "alert-dismissable", "fade", "in"], ["type", "button", "data-dismiss", "alert", "aria-hidden", "true", "title", "Close alert", 1, "close"], [1, "data-header-actions"], [1, "demoTabs"], ["class", "btn btn-alt", 3, "routerLink", 4, "ngIf"], [1, "demoTabs", 3, "routerLink"], [1, "btn", "btn-alt", 3, "routerLink"], ["for", "password", 1, "col-sm-2", "control-label"], ["type", "password", "formControlName", "password", "id", "password", "placeholder", "Enter password", "minlength", "6", 1, "form-control"], [3, "disabled", "value"], [3, "value"], [3, "value", "disabled"], ["id", "city", "formControlName", "role", 1, "form-control"], ["type", "submit", 1, "btn", "btn-lg", "btn-danger", 2, "margin-left", "0.5em", 3, "click"]],
     template: function UserFormComponent_Template(rf, ctx) {
       if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0);
@@ -6483,6 +6489,7 @@ let UserFormComponent = /*#__PURE__*/(() => {
       }
 
       if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](21, _c3, ctx.adminMode));
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.showAlertMessage);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](7);
@@ -6518,14 +6525,14 @@ let UserFormComponent = /*#__PURE__*/(() => {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.adminMode);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction2"](20, _c3, !ctx.editMode, ctx.editMode));
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction2"](23, _c4, !ctx.editMode, ctx.editMode));
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](!ctx.editMode ? "Register" : "Update");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", ctx.editMode);
       }
     },
-    directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControlName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NumberValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.SelectControlValueAccessor, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgClass, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLink, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLinkWithHref, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.MinLengthValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵNgSelectMultipleOption"]],
+    directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__.NgClass, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.FormControlName, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NumberValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.SelectControlValueAccessor, _angular_common__WEBPACK_IMPORTED_MODULE_5__.NgForOf, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLink, _angular_router__WEBPACK_IMPORTED_MODULE_4__.RouterLinkWithHref, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.MinLengthValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ɵNgSelectMultipleOption"]],
     styles: ["input.ng-invalid.ng-touched[_ngcontent-%COMP%] {\r\n    border: 1px solid red\r\n}\r\n\r\nselect.ng-invalid.ng-touched[_ngcontent-%COMP%] {\r\n    border: 1px solid red;\r\n}\r\n\r\n.row[_ngcontent-%COMP%] {\r\n    width: 70em;\r\n}\r\n\r\n@media only screen and (max-width: 790px) {\r\n    .row[_ngcontent-%COMP%] {\r\n        width: 50em;\r\n    }\r\n}\r\n\r\n@media only screen and (max-width: 746px) {\r\n    .row[_ngcontent-%COMP%] {\r\n        width: 32em;\r\n    }\r\n}\r\n\r\n.alert[_ngcontent-%COMP%] {\r\n    width: 74.5%;\r\n}"]
   });
   return UserFormComponent;
