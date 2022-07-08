@@ -20,6 +20,7 @@ app.use("/api/users", require("./routes/userRoutes"));
 app.use("/api/address", require("./routes/addressRoutes"));
 app.use("/api/resetPassword", require("./routes/resetPassRoutes"));
 app.use("/api/media", require("./routes/mediaRoutes"));
+app.use("/api/payment", require("./routes/orderRoutes"));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
